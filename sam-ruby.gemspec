@@ -1,10 +1,10 @@
 
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "sam_ruby/version"
+require "sam-ruby/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "sam_ruby"
+  spec.name          = "sam-ruby"
   spec.version       = SamRuby::VERSION
   spec.authors       = ["Ryan Porter"]
   spec.email         = ["rap@endymion.com"]
