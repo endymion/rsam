@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Ryan Porter"]
   spec.email         = ["rap@endymion.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{A framework for using SAM with Ruby.}
+  spec.description   = %q{Rake tasks for triggering SAM with multiple development environments.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

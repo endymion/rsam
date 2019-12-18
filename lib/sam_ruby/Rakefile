@@ -1,0 +1,4 @@
+desc "Hello what's up?"
+task :test do
+  puts "Hello, world."
+end
