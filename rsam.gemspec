@@ -42,4 +42,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "pry", "~> 0.10.4"
   spec.add_dependency "thor", "~> 0.20.3"
   spec.add_dependency "colorize", "~> 0.8.1"
+  spec.add_dependency "aws-sdk", "~> 3.0.1"
 end
