@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    sam-ruby (0.1.0)
+    rsam (0.1.0)
       colorize (~> 0.8.1)
       thor (~> 0.20.3)
 
@@ -40,8 +40,8 @@ DEPENDENCIES
   bundler (~> 1.16)
   pry (~> 0.10.4)
   rake (~> 10.0)
+  rsam!
   rspec (~> 3.0)
-  sam-ruby!
 
 BUNDLED WITH
    1.16.6
