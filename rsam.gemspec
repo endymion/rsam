@@ -4,8 +4,8 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "rsam/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "sam-ruby"
-  spec.version       = SamRuby::VERSION
+  spec.name          = "rsam"
+  spec.version       = RSAM::VERSION
   spec.authors       = ["Ryan Porter"]
   spec.email         = ["rap@endymion.com"]
 
