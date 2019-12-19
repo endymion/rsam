@@ -1,0 +1,45 @@
+require 'yaml'
+require 'aws-sdk'
+
+desc "sam build"
+task :build do
+  system('sam build --use-container')
+end
+
+desc "sam package"
+task :package do
+  system("sam package \
+    --output-template-file #{environment}-packaged.yaml \
+    --s3-bucket #{bucket_name}")
+end
+
+desc "sam deploy"
+task :deploy do
+  system("sam deploy \
+    --template-file #{environment}-packaged.yaml \
+    --stack-name #{project_name}-#{environment} \
+    --capabilities CAPABILITY_IAM")
+end
+
+def environment
+  ENV["environment"] || 'development'
+end
+
+def project_name
+  `pwd`.gsub(/^.*\//,'').chop
+end
+
+def bucket_name
+  name = project_name + '-deployment'
+
+  # Make sure that it exists.
+  s3 = Aws::S3::Client.new
+  unless s3.list_buckets.buckets.any?{|bucket| bucket.name.eql? name}
+    puts "Creating S3 bucket: #{name}"
+    s3.create_bucket(bucket: name)
+  else
+    puts "S3 bucket exists: #{name}"
+  end
+
+  name
+end
